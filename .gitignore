@@ -1,0 +1,172 @@
+# =============================================================================
+# .gitignore - Pipeline de Optimización de Deep Learning
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+sdist/
+wheels/
+*.whl
+pip-wheel-metadata/
+share/python-wheels/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# -----------------------------------------------------------------------------
+# Entornos virtuales
+# -----------------------------------------------------------------------------
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.python-version
+
+# -----------------------------------------------------------------------------
+# Cache de modelos y datasets (se generan automáticamente)
+# -----------------------------------------------------------------------------
+cache_modelos/
+cache_dataset/
+cache_huggingface/
+.huggingface_cache/
+.cache/
+
+# -----------------------------------------------------------------------------
+# Resultados generados por el usuario (NO se suben al repo)
+# Solo se mantiene resultados_referencia.csv y gráficas pre-generadas
+# -----------------------------------------------------------------------------
+resultados/resultados_usuario.csv
+resultados/log_ejecucion.txt
+resultados/log_ejecucion_*.txt
+
+# -----------------------------------------------------------------------------
+# Archivos temporales y de sistema
+# -----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# IDEs y editores
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------------------------------------------------------
+# Jupyter Notebook
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# -----------------------------------------------------------------------------
+# PyTorch / Deep Learning
+# -----------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+# Excepción: modelos cacheados del destilado (si se quieren distribuir)
+!cache_modelos/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Outputs grandes (no versionar)
+# -----------------------------------------------------------------------------
+outputs/
+runs/
+wandb/
+mlruns/
+*.tar.gz
+*.zip
+# Excepción: gráficas generadas (sí se suben al repo)
+!resultados/frontera_pareto.png
+!resultados/frontera_pareto_interactiva.html
+!resultados/resultados_referencia.csv
+
+# -----------------------------------------------------------------------------
+# Variables de entorno y secretos
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.json
+config.local.py
+
+# -----------------------------------------------------------------------------
+# Documentación generada
+# -----------------------------------------------------------------------------
+_site/
+*.docx
+# Excepción: PDF del plan técnico (sí se distribuye)
+!docs/Plan_Prueba_Concepto_Local.pdf
+
+# -----------------------------------------------------------------------------
+# OS específico
+# -----------------------------------------------------------------------------
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+$RECYCLE.BIN/
+*.lnk
+
+# -----------------------------------------------------------------------------
+# CUDA / GPU profiling
+# -----------------------------------------------------------------------------
+*.nvprof
+*.nsys
+*.nsys-rep
+*.ncu
+*.ncu-rep
+
+# -----------------------------------------------------------------------------
+# Type checkers / linters
+# -----------------------------------------------------------------------------
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/

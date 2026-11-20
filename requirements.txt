@@ -1,0 +1,35 @@
+# =============================================================================
+# Requirements.txt - Pipeline de Optimización de Deep Learning
+# Prueba de Concepto Local - RTX 4060 Laptop (8 GB VRAM)
+# =============================================================================
+
+# PyTorch con soporte CUDA 12.1 (compatible con RTX 4060 Laptop)
+# IMPORTANTE: Para instalar PyTorch con CUDA, ejecuta:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Modelos y datasets de HuggingFace
+transformers>=4.36.0
+datasets>=2.16.0
+tokenizers>=0.15.0
+huggingface-hub>=0.20.0
+accelerate>=0.25.0
+safetensors>=0.4.0
+
+# Cuantización INT8/INT4
+bitsandbytes>=0.41.0
+
+# Métricas y análisis
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.1.0
+
+# Visualización
+matplotlib>=3.7.0
+plotly>=5.18.0
+seaborn>=0.13.0
+
+# Utilidades
+tqdm>=4.66.0
+psutil>=5.9.0
